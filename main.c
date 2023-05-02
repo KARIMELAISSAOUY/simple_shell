@@ -1,5 +1,6 @@
 #include "shell.h"
-
+#include<stdio.h>
+#include<stdlib.h>
 /**
  * main -- entry point
  * @ac: arg count.
@@ -10,7 +11,7 @@
 int main(int ac, char **av)
 {
 	info_t info[] = { INFO_INIT };
-	int fd = 2;
+	int fd= 2;
 
 	asm ("mov %1, %0\n\t"
 		"add $3, %0"
@@ -27,7 +28,7 @@ int main(int ac, char **av)
 			if (errno == ENOENT)
 			{
 				_eputs(av[0]);
-				_eputs(": 0: Can't open ");
+				_eputs(": 0: Can't Open ");
 				_eputs(av[1]);
 				_eputchar('\n');
 				_eputchar(BUF_FLUSH);
