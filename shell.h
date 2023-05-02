@@ -1,6 +1,8 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
+/* alx alx  karim */
+
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <limits.h>
@@ -13,17 +15,17 @@
 #include <sys/types.h>
 
 
-/* for command chaining */
+/* For Command chaining */
 #define CMD_NORM	0
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
-/* for convert_number() */
+/* For Convert_number() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
-/* for read/write buffers */
+/* For Read/write buffers */
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
@@ -40,6 +42,7 @@ extern char **environ;
 
 
 /**
+ *  alx
  * struct liststr -- singly linked list
  * @num: the number field.
  * @str: a string.
@@ -47,13 +50,12 @@ extern char **environ;
  */
 typedef struct liststr
 {
-	int num;
-	char *str;
+	int num;char *str;
 	struct liststr *next;
 } list_t;
 
 /**
- *struct passinfo - contains pseudo-arguements to pass into a function,
+ *struct passinfo -- contains pseudo-arguements to pass into a function,
  *		allowing uniform prototype for function pointer struct
  *@arg: a string generated from getline containing arguements
  *@argv: an array of strings generated from arg
@@ -90,7 +92,6 @@ typedef struct passinfo
 	char **environ;
 	int env_changed;
 	int status;
-
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
@@ -113,7 +114,7 @@ typedef struct builtin
 } builtin_table;
 
 
-/* toem_shloop.c */
+/* Toem_shloop.c */
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
@@ -235,6 +236,7 @@ void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
 int replace_string(char **, char *);
+/* alx 2023 alx 2024 */
 
 
 #endif

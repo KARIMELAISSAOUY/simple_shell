@@ -1,5 +1,5 @@
 #include "shell.h"
-
+/* alx */
 /**
  * hsh -- main shell loop
  * @info: the parameter & return info struct
@@ -45,7 +45,7 @@ int hsh(info_t *info, char **av)
 }
 
 /**
- * find_builtin -- finds a builtin command
+ * Find_builtin -- finds a builtin command
  * @info: the parameter & return info struct
  *
  * Return: -1 if builtin not found,

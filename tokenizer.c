@@ -1,5 +1,5 @@
 #include "shell.h"
-
+#include <stdio.h>
 /**
  * **strtow -- splits a string into words. Repeat delimiters are ignored
  * @str: the input string
@@ -48,6 +48,7 @@ char **strtow(char *str, char *d)
 	return (s);
 }
 
+/* alx */
 /**
  * **strtow2 -- splits a string into words
  * @str: the input string.
